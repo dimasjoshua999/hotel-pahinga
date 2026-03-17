@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check In</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div>
+    <span id="userDisplay"></span>
+    <button onclick="logout()" class="btn">Logout</button>
+    </div>
+    <h2 class="logo">Pahinga</h2>
+    <a href="rooms.html">← Back</a>
+</nav>
+
+<div class="checkout-container">
+
+    <div class="form-section">
+        <h2><b>Checkout</b></h2>
+
+        <h3>Contact Info</h3>
+        <input placeholder="First Name">
+        <input placeholder="Last Name">
+        <input placeholder="Email">
+
+        <h3>Booking</h3>
+        <input type="date" id="checkinDate">
+        <input type="date" id="checkoutDate">
+        <input type="number" id="pax" value="1">
+
+        <h3>Payment</h3>
+        <select id="payment">
+            <option>GCash</option>
+            <option>BPI</option>
+        </select>
+
+        <button onclick="confirmBooking()">Confirm</button>
+    </div>
+
+    <div class="summary-section">
+        <h3>Summary</h3>
+        <div id="summaryBox"></div>
+    </div>
+
+</div>
+
+<script src="js/booking.js"></script>
+</body>
+</html>

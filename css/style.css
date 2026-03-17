@@ -1,0 +1,457 @@
+/* CENTER PAGE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    color: white;
+}
+
+.navbar h2 {
+    font-family: cursive;
+    font-size: 28px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn {
+    background: white;
+    color: #3a7bd5;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1a2a44;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('../assets/standard.jpg') center/cover;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.4);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+}
+
+/* ROOMS */
+.room-flex {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.room-flex:hover {
+    transform: scale(1.03);
+}
+
+.room-img {
+    width: 180px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.room-img:hover {
+    transform: scale(1.1);
+}
+
+.room-info {
+    margin-left: 20px;
+}
+
+.room-info h3 {
+    font-weight: bold;
+}
+
+.room-info p {
+    color: #3a7bd5;
+}
+
+.room-info button {
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.room-info button:hover {
+    transform: scale(1.1);
+    background: #1a2a44;
+}
+
+/* CHECKOUT */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.form-section, .summary-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+}
+
+h2, h3 {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 10px;
+}
+
+/* CHAT */
+#chatIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #3a7bd5;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: float 2s infinite;
+}
+
+#chatbox {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-8px);}
+    100% {transform: translateY(0);}
+}
+
+.logo {
+    font-family: cursive;
+}
+
+.receipt-box {
+    width: 300px;
+    margin: 80px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+.about {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 40px;
+}
+
+/* LOGIN CARD */
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+/* LOGO */
+.logo {
+    font-family: cursive;
+    color: white;
+}
+
+/* INPUTS */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* BUTTON */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #3a7bd5;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    transform: scale(1.05);
+    background: #1a2a44;
+    color: white;
+}
+
+/* ROOM GALLERY */
+.room-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* ROOM CARD */
+.room-card {
+    width: 220px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 1s ease forwards;
+}
+
+/* IMAGE */
+.room-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* TEXT */
+.room-card h3 {
+    margin: 10px 0 5px;
+}
+
+.room-card p {
+    padding: 0 10px 15px;
+    color: #555;
+}
+
+/* 🔥 HOVER EFFECT */
+.room-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.room-card:hover img {
+    transform: scale(1.1);
+}
+
+/* 🎬 ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(135deg, #0f2a44, #1a4a7a);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* CONTENT */
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* SOCIALS */
+.socials {
+    margin-bottom: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 8px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: white;
+    color: #0f2a44;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: #00d2ff;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* LINKS */
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    display: block;
+    color: #00d2ff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* CALL BOX */
+.footer-call {
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid white;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+    color: #00d2ff;
+}
+
+/* COPYRIGHT */
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.video-hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.video-overlay h1 {
+    font-size: 40px;
+}
+
+.video-overlay p {
+    font-size: 18px;
+}

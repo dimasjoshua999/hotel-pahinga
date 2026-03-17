@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pahinga Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PROTECT PAGE -->
+    <script>
+        if (!localStorage.getItem("user")) {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">Pahinga</h2>
+
+    <ul>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div>
+        <span id="userDisplay"></span>
+        <button onclick="logout()" class="btn">Logout</button>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="overlay">
+        <h1 id="welcomeText"></h1>
+        <p>Relax. Recharge. Repeat.</p>
+        <a href="rooms.html" class="btn">Explore Rooms</a>
+    </div>
+</section>
+
+<!-- CHAT -->
+<div id="chatIcon" onclick="toggleChat()">💬</div>
+
+<div id="chatbox" class="hidden">
+    <button onclick="toggleChat()">X</button>
+    <div id="messages"></div>
+    <input id="chatInput">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<!-- USER DISPLAY SCRIPT -->
+<script>
+    let user = localStorage.getItem("user");
+
+    document.getElementById("userDisplay").innerText = "Hi, " + user;
+
+    document.getElementById("welcomeText").innerHTML =
+        `Hello <b>${user}</b>, Welcome to Hotel Pahinga`;
+
+    function logout() {
+        localStorage.removeItem("user");
+        window.location.href = "login.html";
+    }
+</script>
+
+<script src="js/chatbot.js"></script>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <!-- Social Icons -->
+        <div class="socials">
+            <a href="#">f</a>
+            <a href="#">t</a>
+            <a href="#">ig</a>
+            <a href="#">in</a>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">CONTACT US</a>
+            <a href="#">GET DIRECTIONS</a>
+        </div>
+
+        <!-- Phone -->
+        <div class="footer-call">
+            CALL +63 8888-8888
+        </div>
+
+        <!-- Bottom Links -->
+        <div class="footer-bottom">
+            <a href="about.html">ABOUT</a> |
+            <a href="#">PRIVACY POLICY</a> |
+            <a href="#">TERMS OF USE</a> |
+            <a href="#">CAREERS</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Pahinga Hotel. All Rights Reserved
+        </p>
+
+    </div>
+</footer>
+</body>
+</html>
