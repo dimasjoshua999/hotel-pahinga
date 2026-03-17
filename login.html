@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Login - Pahinga</title>
+
+    <!-- ✅ MOBILE RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
 
     <script>
-        // if already logged in → go to home
         if (localStorage.getItem("user")) {
             window.location.href = "index.html";
         }
@@ -13,14 +16,17 @@
 </head>
 <body>
 
-<div class="login-container">
-    <h1 class="logo">Pahinga</h1>
-    <p>Welcome back</p>
+<!-- ✅ WRAPPER FOR CENTERING -->
+<div class="login-page">
+    <div class="login-container">
+        <h1 class="logo">Pahinga</h1>
+        <p>Welcome back</p>
 
-    <input id="nameInput" placeholder="Enter your name">
-    <input id="passwordInput" type="password" placeholder="Password (user123)">
+        <input id="nameInput" placeholder="Enter your name">
+        <input id="passwordInput" type="password" placeholder="Password (user123)">
 
-    <button onclick="login()">Login</button>
+        <button onclick="login()">Login</button>
+    </div>
 </div>
 
 <script>
@@ -38,10 +44,7 @@ function login() {
         return;
     }
 
-    // ✅ SAVE USER
     localStorage.setItem("user", name);
-
-    // ✅ REDIRECT
     window.location.href = "index.html";
 }
 </script>
